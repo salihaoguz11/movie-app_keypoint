@@ -4,7 +4,8 @@ import NavbarCom from "../components/NavbarCom";
 import SearchBar from "../components/SearchBar";
 import { Container } from "react-bootstrap";
 import filmImage from "../helper/img/film.jpg";
-import MovieCard from "../components/MovieCard";
+
+import Cards from "../components/Cards";
 
 const Main = () => {
   return (
@@ -19,7 +20,7 @@ const Main = () => {
     >
       <NavbarCom />
       <SearchBar />
-      <MovieCard />
+      <Cards />
     </div>
   );
 };
