@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
   return (
     <Card
       className="movie"
-      onClick={() => navigate(`/details/${media_type}/${id}`)}
+      onClick={() => navigate(`/detail/${media_type}/${id}`)}
     >
       <Card.Img variant="top" src={IMG_URL + poster_path} />
 
