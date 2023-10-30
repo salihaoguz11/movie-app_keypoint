@@ -17,11 +17,9 @@ const SearchBar = () => {
           <Form.Control
             placeholder="Search a movie"
             type="search"
-            // onChange={(e) => setSearch(e.target.value)}
-            // value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
             autoFocus
-
-            // onChange={(e) => setSearch(e.target.value)}
           />
         </FormGroup>
         <FormGroup as={Col} md="3">
