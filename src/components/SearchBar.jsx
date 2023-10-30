@@ -7,7 +7,7 @@ import { FormGroup } from "react-bootstrap";
 
 const SearchBar = () => {
   return (
-    <Form className="m-4">
+    <Form className="mx-auto my-5 w-50">
       <Row className="mb-3">
         <FormGroup as={Col} md="9">
           <Form.Control
