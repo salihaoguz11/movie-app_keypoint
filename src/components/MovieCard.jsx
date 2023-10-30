@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
+
 import { Context } from "../context/Context";
 
 const MovieCard = ({
@@ -21,6 +21,8 @@ const MovieCard = ({
   const navigate = useNavigate();
   const defaultImage =
     "https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80";
+
+  // function that updates the background color according to the vote_avarage
   const getVoteClass = (vote) => {
     if (vote >= 8) {
       return "green";
@@ -35,6 +37,7 @@ const MovieCard = ({
   return (
     <Card
       className="movie"
+      //naviagte to the detail page by media_type and id
       onClick={() => navigate(`/detail/${media_type}/${id}`)}
     >
       <Card.Img
@@ -47,7 +50,9 @@ const MovieCard = ({
             : defaultImage
         }
       />
+
       {overview ? (
+        //conditioanla rendering if tehre is any overview result
         <div className="movie-over">
           <p>{overview}</p>
         </div>
