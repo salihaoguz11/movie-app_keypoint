@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 .movie {
   background-color: #080f36;
   border-radius: 3px;

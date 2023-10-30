@@ -19,11 +19,11 @@ const SearchBar = () => {
   };
 
   return (
-    <Form className="mx-auto my-5 w-50" onSubmit={handleSubmit}>
+    <Form className="mx-auto my-auto w-50" onSubmit={handleSubmit}>
       <Row className="mb-3">
         <FormGroup as={Col} md="9">
           <Form.Control
-            placeholder="Search a movie"
+            placeholder="Search a movie, celebrity, or a Tv show  "
             type="search"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
