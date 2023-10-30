@@ -1,20 +1,23 @@
-import React, { useContext } from "react";
-import { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
+import { useContext } from "react";
+import { Context } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { FormGroup } from "react-bootstrap";
-import { Context } from "../context/Context";
-import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
+  //get the values from context
   const { search, setSearch, getData } = useContext(Context);
   const navigate = useNavigate();
+
+  //function to handle form submision either click or enter
   const handleSubmit = (e) => {
     e.preventDefault();
     getData();
+    //naviage to home page
     navigate("/");
+    //clear the search field
     setSearch("");
   };
 
@@ -27,6 +30,7 @@ const SearchBar = () => {
             type="search"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
+            //automatacally focus on the search field
             autoFocus
           />
         </FormGroup>

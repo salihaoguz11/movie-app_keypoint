@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../context/Context";
 import SearchBar from "../components/SearchBar";
 import { Container, Row, Col, Image, ListGroup } from "react-bootstrap";
-
 import axios from "axios";
-import filmImage from "../helper/img/film.jpg";
 
 const Detail = () => {
   const [detail, setDetail] = useState("");
