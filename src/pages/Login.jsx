@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import { Icon } from "../helper/Icons";
 
 const Login = () => {
   return (
@@ -18,17 +19,14 @@ const Login = () => {
       }}
     >
       <Row>
-        <Col>
-          <h1>Movie App</h1>
+        <Col className="d-none d-md-block bg-primary p-5">
+          <Icon name="register" />
         </Col>
-        <Col>
+        <Col className="p-5 bg-light">
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -36,7 +34,7 @@ const Login = () => {
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
             <div className="d-flex justify-content-center">
-              <Button variant="info" type="submit">
+              <Button variant="info" type="submit" className="w-75">
                 Submit
               </Button>
             </div>
