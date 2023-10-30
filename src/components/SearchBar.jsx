@@ -19,7 +19,7 @@ const SearchBar = () => {
   };
 
   return (
-    <Form className="mx-auto my-auto w-50" onSubmit={handleSubmit}>
+    <Form className="mx-auto my-4 w-50" onSubmit={handleSubmit}>
       <Row className="mb-3">
         <FormGroup as={Col} md="9">
           <Form.Control

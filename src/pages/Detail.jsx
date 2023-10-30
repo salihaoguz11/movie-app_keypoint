@@ -25,10 +25,10 @@ const Detail = () => {
   };
   return (
     <div style={{ backgroundColor: "#FF5733" }}>
-      <Container fluid className="py-5">
+      <Container fluid className="py-4">
         <SearchBar />
         <div>
-          <Container className="d-flex justify-content-center bg-dark text-light ">
+          <Container className="d-flex justify-content-center bg-dark text-light  ">
             <Row className="rounded-lg  shadow-lg max-w-6xl">
               <Col lg={4} className="p-0">
                 <Image
@@ -65,13 +65,13 @@ const Detail = () => {
                     {" "}
                     {media_type === "person"
                       ? `Birthday:${detail.birthday}`
-                      : "rate"}
+                      : `Rate : ${detail.vote_average}`}
                   </ListGroup.Item>
                   <ListGroup.Item variant="dark">
                     {" "}
                     {media_type === "person"
                       ? `Popularity:${detail.popularity}`
-                      : ` Total Vote :  + vote_count`}
+                      : ` Total Vote :  ${detail.vote_count}`}
                   </ListGroup.Item>
                   <ListGroup.Item className="rounded-t-lg" variant="dark">
                     <Link

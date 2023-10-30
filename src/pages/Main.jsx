@@ -10,7 +10,7 @@ import Cards from "../components/Cards";
 const Main = () => {
   return (
     <div
-      className="min-vh-100"
+      className="min-vh-100 "
       style={{
         background: `url(${filmImage})`,
         backgroundPosition: "center",
@@ -19,7 +19,7 @@ const Main = () => {
       }}
     >
       <NavbarCom />
-      <SearchBar />
+      <SearchBar className="mt-5" />
       <Cards />
     </div>
   );
