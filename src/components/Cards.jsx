@@ -8,10 +8,10 @@ const Cards = () => {
 
   return (
     <div className="row d-flex ">
-      {movies?.map((movie) => {
+      {movies?.map((item) => {
         return (
           <Container className="col-12  col-sm-6 col-md-4 col-lg-3 card mb-4 ms-4 bg-dark">
-            <MovieCard movie={movie} key={movie.id} IMG_URL={IMG_URL} />
+            <MovieCard {...item} key={item.id} IMG_URL={IMG_URL} />
           </Container>
         );
       })}

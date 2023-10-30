@@ -4,19 +4,19 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { Context } from "../context/Context";
 
-const MovieCard = ({ movie }) => {
-  const {
-    title,
-    overview,
-    rate,
-    popularity,
-    name,
-    poster_path,
-    id,
-    media_type,
-    profile_path,
-  } = movie;
-
+const MovieCard = ({
+  title,
+  overview,
+  rate,
+  popularity,
+  vote_average,
+  name,
+  poster_path,
+  id,
+  media_type,
+  profile_path,
+}) => {
+  console.log(overview);
   const { IMG_URL } = useContext(Context);
   const navigate = useNavigate();
   const defaultImage =
@@ -37,10 +37,17 @@ const MovieCard = ({ movie }) => {
             : defaultImage
         }
       />
+      {overview ? (
+        <div className="movie-over">
+          <p>{overview}</p>
+        </div>
+      ) : null}
 
       <Card.Footer className="d-flex  justify-content-between p-2 text-white">
         <Card.Title>{title || name}</Card.Title>
-        <Card.Title>{rate || popularity}</Card.Title>
+        {/* <Card.Title>
+          {vote_average ? vote_average.toFixed(1) : popularity.toFixed(1)}
+        </Card.Title> */}
       </Card.Footer>
     </Card>
   );
