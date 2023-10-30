@@ -17,7 +17,15 @@ const ContextProvider = ({ children }) => {
     console.log(data);
   };
 
-  const values = { search, setSearch, movies, setMovies, getData, IMG_URL };
+  const values = {
+    search,
+    setSearch,
+    movies,
+    setMovies,
+    getData,
+    IMG_URL,
+    API_KEY,
+  };
   return <Context.Provider value={values}>{children}</Context.Provider>;
 };
 export default ContextProvider;
