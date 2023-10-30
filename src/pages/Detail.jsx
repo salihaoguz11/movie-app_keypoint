@@ -22,11 +22,11 @@ const Detail = () => {
     console.log(data);
   };
   return (
-    <div style={{ backgroundColor: "#FF5733" }}>
+    <div>
       <Container fluid className="py-4">
         <SearchBar />
         <div>
-          <Container className="d-flex justify-content-center bg-dark text-light  ">
+          <Container className="d-flex justify-content-center bg-dark text-light   ">
             <Row className="rounded-lg  shadow-lg max-w-6xl">
               <Col lg={4} className="p-0">
                 <Image
@@ -41,18 +41,18 @@ const Detail = () => {
                   alt="poster"
                 />
               </Col>
-              <Col className="p-3 d-flex flex-column justify-content-between">
+              <Col className="p-5 d-flex flex-column justify-content-between ">
                 <div>
-                  <h2 className="text-center  display-4">
+                  <h2 className="text-center text-warning display-4">
                     {detail.title || detail.name}
                   </h2>
-                  <h5 className="text-gray font-weight-bold mb-2">Overview</h5>
+                  <h5 className="text-info font-weight-bold mb-2">Overview</h5>
                   <p className="text-gray mb-1">
                     {detail.overview ? detail.overview : "Not Found"}
                   </p>
                 </div>
                 <ListGroup>
-                  <ListGroup.Item variant="dark" className="rounded-t-lg">
+                  <ListGroup.Item variant="dark" className="rounded-t-lg ">
                     {media_type === "person"
                       ? `Known for:${detail.known_for_department}`
                       : `Release Date:${

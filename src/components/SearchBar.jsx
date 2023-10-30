@@ -24,7 +24,7 @@ const SearchBar = () => {
   return (
     <Form className="mx-auto my-4 w-50" onSubmit={handleSubmit}>
       <Row className="mb-3">
-        <FormGroup as={Col} md="9">
+        <FormGroup as={Col} xs="9" md="8">
           <Form.Control
             placeholder="Search a movie, celebrity, or a Tv show  "
             type="search"
@@ -34,7 +34,12 @@ const SearchBar = () => {
             autoFocus
           />
         </FormGroup>
-        <FormGroup as={Col} md="3">
+        <FormGroup
+          as={Col}
+          xs="3"
+          md="4"
+          className="d-flex justify-content-center "
+        >
           <button type="submit" className="btn btn-warning ">
             Search
           </button>
