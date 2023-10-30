@@ -1,10 +1,26 @@
-import React from "react";
+import { useRef, useContext } from "react";
+import { Context } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Icon } from "../helper/Icons";
 
 const Login = () => {
+  const { user, setUser } = useContext(Context);
+  const navigate = useNavigate();
+  console.log(user);
+  //create a ref for the form
+  const formRef = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //send user details to thre session storage
+    sessionStorage.setItem("user", JSON.stringify(user));
+    navigate("/");
+    //clear the form fields using the ref
+    formRef.current.reset();
+  };
   return (
     <Container
       fluid
@@ -23,15 +39,27 @@ const Login = () => {
           <Icon name="register" />
         </Col>
         <Col className="p-5 bg-light">
-          <Form>
+          <Form onSubmit={handleSubmit} ref={formRef}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                onChange={(e) => setUser({ ...user, email: e.target.value })}
+                required
+                autoFocus
+              />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setUser({ ...user, password: e.target.value })}
+                required
+                minLength={6}
+              />
             </Form.Group>
             <div className="d-flex justify-content-center">
               <Button variant="info" type="submit" className="w-75">

@@ -6,6 +6,9 @@ export const Context = createContext();
 const ContextProvider = ({ children }) => {
   const [search, setSearch] = useState(""); // store the current search
   const [movies, setMovies] = useState([]); // store the data from API
+  const [user, setUser] = useState(
+    JSON.parse(sessionStorage.getItem("user")) || false
+  );
   const API_KEY = process.env.REACT_APP_apiKey;
   const IMG_URL = "https://image.tmdb.org/t/p/w1280";
   const MULTI_SEARCH_API = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=${search}`;
@@ -22,6 +25,8 @@ const ContextProvider = ({ children }) => {
     search,
     setSearch,
     movies,
+    user,
+    setUser,
     setMovies,
     getData,
     IMG_URL,
