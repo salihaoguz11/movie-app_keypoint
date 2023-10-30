@@ -6,12 +6,20 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import { FormGroup } from "react-bootstrap";
 import { Context } from "../context/Context";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
-  const { search, setSearch } = useContext(Context);
+  const { search, setSearch, getData } = useContext(Context);
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getData();
+    navigate("/");
+    setSearch("");
+  };
 
   return (
-    <Form className="mx-auto my-5 w-50">
+    <Form className="mx-auto my-5 w-50" onSubmit={handleSubmit}>
       <Row className="mb-3">
         <FormGroup as={Col} md="9">
           <Form.Control
