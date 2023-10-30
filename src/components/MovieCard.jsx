@@ -21,7 +21,17 @@ const MovieCard = ({
   const navigate = useNavigate();
   const defaultImage =
     "https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80";
-
+  const getVoteClass = (vote) => {
+    if (vote >= 8) {
+      return "green";
+    } else if (vote >= 6) {
+      return "orange";
+    } else if (vote < 6) {
+      return "red";
+    } else {
+      return "";
+    }
+  };
   return (
     <Card
       className="movie"
@@ -45,9 +55,9 @@ const MovieCard = ({
 
       <Card.Footer className="d-flex  justify-content-between p-2 text-white">
         <Card.Title>{title || name}</Card.Title>
-        {/* <Card.Title>
+        <Card.Title className={`tag ${getVoteClass(vote_average)}`}>
           {vote_average ? vote_average.toFixed(1) : popularity.toFixed(1)}
-        </Card.Title> */}
+        </Card.Title>
       </Card.Footer>
     </Card>
   );
