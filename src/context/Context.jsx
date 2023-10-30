@@ -9,15 +9,13 @@ const ContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const MULTI_SEARCH_API = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=${search}`;
 
-  const getData = async (API) => {
-    const { data } = await axios(API);
+  const getData = async () => {
+    const { data } = await axios(MULTI_SEARCH_API);
 
     setMovies(data.results);
     console.log(data);
   };
-  useEffect(() => {
-    getData(MULTI_SEARCH_API);
-  }, []);
+
   const values = { search, setSearch, movies, setMovies, getData };
   return <Context.Provider value={values}>{children}</Context.Provider>;
 };
