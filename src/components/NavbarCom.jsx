@@ -12,15 +12,9 @@ const NavbarCom = () => {
         <Navbar.Brand href="#home">Movie App</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          {user ? (
-            <Navbar.Text>
-              Hello, <a href="#login">{user.email}</a>
-            </Navbar.Text>
-          ) : (
-            <Navbar.Text>
-              Hello, <a href="#login">Mark Otto</a>
-            </Navbar.Text>
-          )}
+          <Navbar.Text>
+            Logged in as: <a href="#login">{user.email}</a>
+          </Navbar.Text>
         </Navbar.Collapse>
       </Container>
     </Navbar>
