@@ -2,7 +2,7 @@ import React from "react";
 
 import NavbarCom from "../components/NavbarCom";
 import SearchBar from "../components/SearchBar";
-import { Container } from "react-bootstrap";
+
 import filmImage from "../helper/img/film.jpg";
 
 import Cards from "../components/Cards";
