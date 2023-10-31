@@ -4,15 +4,17 @@ import Login from "../pages/Login";
 import Main from "../pages/Main";
 import Detail from "../pages/Detail";
 import NotFound from "../pages/NotFound";
+import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/main" element={<Main />} />
-
-        <Route path="/detail/:media_type/:id" element={<Detail />} />
+        <Route path="" element={<PrivateRouter />}>
+          <Route path="/main" element={<Main />} />
+          <Route path="/detail/:media_type/:id" element={<Detail />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

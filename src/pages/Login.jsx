@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     //send user details to thre session storage
     sessionStorage.setItem("user", JSON.stringify(user));
-    navigate("/");
+    navigate("/main");
     //clear the form fields using the ref
     formRef.current.reset();
   };
