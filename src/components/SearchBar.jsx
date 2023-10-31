@@ -16,7 +16,7 @@ const SearchBar = () => {
     e.preventDefault();
     getData();
     //naviage to home page
-    navigate("/");
+    navigate("/main");
     //clear the search field
     setSearch("");
   };
