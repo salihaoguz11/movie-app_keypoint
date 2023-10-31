@@ -9,8 +9,8 @@ const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/main" element={<Main />} />
 
         <Route path="/detail/:media_type/:id" element={<Detail />} />
         <Route path="*" element={<NotFound />} />
