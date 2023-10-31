@@ -20,6 +20,7 @@ const Login = () => {
     navigate("/main");
     //clear the form fields using the ref
     formRef.current.reset();
+    // setUser({ email: "", password: "" });
   };
   return (
     <Container
