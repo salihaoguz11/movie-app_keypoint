@@ -10,6 +10,7 @@ const AppRouter = () => {
   return (
     <>
       <Routes>
+        {/* Define routes for different pages or components. */}
         <Route path="/" element={<Login />} />
         <Route path="" element={<PrivateRouter />}>
           <Route path="/main" element={<Main />} />

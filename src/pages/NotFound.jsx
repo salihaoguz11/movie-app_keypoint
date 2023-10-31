@@ -17,7 +17,7 @@ const NotFound = () => {
           <Button
             variant="success"
             className="w-100 px-4 py-2"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/main")}
           >
             Home
           </Button>
