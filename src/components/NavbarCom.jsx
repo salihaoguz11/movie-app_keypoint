@@ -14,8 +14,8 @@ const NavbarCom = () => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text bg-light>
-            Hello, <a href="#login">{user.email}</a>
+          <Navbar.Text className="text-light">
+            Hello, <span className="text-muted">{user.email}</span>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>

@@ -52,7 +52,7 @@ const MovieCard = ({
       />
 
       {overview ? (
-        //conditioanla rendering if tehre is any overview result
+        //conditioanla rendering if there is an overview result
         <div className="movie-over">
           <p>{overview}</p>
         </div>
