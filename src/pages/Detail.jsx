@@ -32,7 +32,7 @@ const Detail = () => {
         <SearchBar />
         <div>
           <Container className="d-flex justify-content-center bg-dark text-light   ">
-            <Row className="rounded-lg  shadow-lg max-w-6xl">
+            <Row className="rounded-lg  shadow-lg">
               <Col lg={4} className="p-0">
                 <Image
                   className="rounded-lg h-100 w-100 object-cover"

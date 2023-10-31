@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //send user details to thre session storage
+    //send user details to the session storage
     sessionStorage.setItem("user", JSON.stringify(user));
     navigate("/main");
     //clear the form fields using the ref
@@ -48,7 +48,7 @@ const Login = () => {
                 type="email"
                 placeholder="Enter email"
                 onChange={(e) => setUser({ ...user, email: e.target.value })}
-                required
+                required // Make the password field required.
                 autoFocus
               />
             </Form.Group>
@@ -58,9 +58,10 @@ const Login = () => {
               <Form.Control
                 type="password"
                 placeholder="Password"
+                // When the user types in the password input, update the 'password' field of the 'user' object.
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
                 required
-                minLength={6}
+                minLength={6} // Enforce a minimum password length of 6 characters.
               />
             </Form.Group>
             <div className="d-flex justify-content-center">
