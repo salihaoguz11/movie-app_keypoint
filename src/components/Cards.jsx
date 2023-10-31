@@ -11,7 +11,7 @@ const Cards = () => {
       {movies?.map((item) => {
         //get movies and return each item by using map method
         return (
-          <Container className="col-12  col-sm-6 col-md-4 col-lg-3 card mb-4 ms-4 bg-dark  justify-content-center align-items-center ">
+          <Container className="col-12  col-sm-6 col-md-4 col-lg-3  mb-4 ms-4    ">
             <MovieCard {...item} key={item.id} IMG_URL={IMG_URL} />
           </Container>
         );
