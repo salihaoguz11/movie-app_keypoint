@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
 const AlertCom = () => {
@@ -10,7 +9,7 @@ const AlertCom = () => {
         nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
         consectetur purus sit amet fermentum.
       </p>
-      <Button>Try Again</Button>
+      <Button variant="outline-danger">Try Again</Button>
     </Alert>
   );
 };
