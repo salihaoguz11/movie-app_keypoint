@@ -20,7 +20,8 @@ const Login = () => {
     navigate("/main");
     //clear the form fields using the ref
     formRef.current.reset();
-    // setUser({ email: "", password: "" });
+    // setUser({ email: "", password: "" }); didnt work well,
+    //when go to different component, user disappears
   };
   return (
     <Container

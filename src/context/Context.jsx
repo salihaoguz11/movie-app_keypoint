@@ -18,7 +18,7 @@ const ContextProvider = ({ children }) => {
     const { data } = await axios(MULTI_SEARCH_API);
 
     setMovies(data.results);
-    console.log(data);
+    // console.log(data);
   };
   //create object values for passing down to the childrens
   const values = {
