@@ -61,7 +61,7 @@ const Login = () => {
                 // When the user types in the password input, update the 'password' field of the 'user' object.
                 onChange={(e) => setUser({ ...user, password: e.target.value })}
                 required
-                minLength={6} // Enforce a minimum password length of 6 characters.
+                minLength={7} // Enforce a minimum password length of 7 characters.
               />
             </Form.Group>
             <div className="d-flex justify-content-center">
